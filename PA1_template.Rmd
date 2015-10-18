@@ -10,7 +10,7 @@ library(Hmisc)
 
 ## Loading and preprocessing the data
 
-1. Load the activity data using read.csv 
+1. Load the activity data using read.csv
 # Clear the work space
 ```{r}
 rm(list=ls())
@@ -22,7 +22,6 @@ if(!file.exists('activity.csv')){
 }
 activityData <- read.csv('activity.csv')
 ```
-
 2. Transform the data if needed for analysis
 ```{r}
 activity_raw$date <- as.POSIXct(activity_raw$date, format="%Y-%m-%d")
