@@ -4,9 +4,6 @@ output:
   html_document:
     keep_md: true
 ---
-library(ggplot2)
-library(scales)
-library(Hmisc)
 
 # Loading and preprocessing the data
 
@@ -17,10 +14,7 @@ library(Hmisc)
 rm(list=ls())
 
 # Load the raw activity data
-if(!file.exists('activity.csv')){
-    unzip('activity.zip')
-}
-activityData <- read.csv('activity.csv')
+activity_raw <- read.csv("activity.csv", stringsAsFactors=FALSE)
 
 # format the date 
 activity_raw$date <- as.POSIXct(activity_raw$date, format="%Y-%m-%d")
